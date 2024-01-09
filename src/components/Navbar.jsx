@@ -70,7 +70,7 @@ const Navbar = () => {
           placeholder="Search features, tutorials, etc."
         />
       </div>
-      <div className="flex items-center justify-end gap-3">
+      <div className="flex items-center sm:justify-start lg:justify-end  gap-3">
         <div className="w-10 h-10 flex items-center justify-center bg-[#E6E6E6] rounded-full cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"

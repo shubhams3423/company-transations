@@ -382,7 +382,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="bg-[#1E2640] w-56  px-[10px] py-4  p-[10px] text-white flex flex-col ">
-        <div className="flex items-center justify-around gap-x-3 mb-6">
+        <div className="flex items-center justify-start gap-x-3 mb-6 sm:justify-around">
           <div className="w-[39px] h-[39px]">
             <img
               src="https://s3-alpha-sig.figma.com/img/18ef/52d9/1494ed3109e53ab9db09579cd5d8839e?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hbXTfDpbx17Dm1UyWrCahHzqo902mog-y7REyL1EVX~ssIEzwHiEcj6MiIHeiOkbDRFcMpt3V-MvddqZyRBHDd-J3LkmTahxCv-UGtnU09Z3J2BfloJvJ7n8-My8RcF0WYqZ6UDqdBSium9I8xL4YyFvx4xreX-agyTnc8DLipLOn6ZANnuZqbZvpSsvyo6nPQr02YzgWu2BYAX~IzuUpJyPWDgjMwbgfHvQm7gpqsVVRXVoDqHJITXGmx4iYGsyfrawR5P-RLJ4ZNnwLYic-E7LCK2GbM-tOGgZf5OIKoUZwQMm35-HaH8YZ-MFzxSXKu~EwjGP9buXyfGZwoPdMg__"
@@ -390,13 +390,13 @@ const Sidebar = () => {
               alt=""
             />
           </div>
-          <div>
+          <div className="hidden sm:block">
             <h1 className="text-[15px] leading-[22px] font-medium">Nishyan</h1>
             <p className="text-[13px] leading-4 font-normal underline opacity-80">
               Visit Store
             </p>
           </div>
-          <div>
+          <div className="hidden sm:block">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -419,13 +419,13 @@ const Sidebar = () => {
                   activeNavLink === navigation.id
                     ? "bg-[#FFFFFF1A] rounded"
                     : ""
-                } flex items-center justify-between gap-x-3 w-full px-4 py-2 cursor-pointer ${
+                } flex items-center justify-between gap-x-3 w-full px-2 py-2 cursor-pointer sm:px-4 ${
                   activeNavLink !== navigation.id ? "hover:bg-[#9696961a]" : ""
                 }`}
                 onClick={() => SetActiveNavLink(navigation.id)}
               >
                 <div className="w-5 h-5 opacity-80">{navigation.icon}</div>
-                <div className="w-full">
+                <div className="w-full hidden sm:block">
                   <h2 className="text-sm opacity-80 font-medium">
                     {navigation.name}
                   </h2>
@@ -434,8 +434,8 @@ const Sidebar = () => {
             );
           })}
         </div>
-        <div className="rounded bg-[#353C53] mt-4  flex items-center gap-x-[10px] py-[6px] px-[12px]">
-          <div className="rounded p-[6px] bg-[#FFFFFF1A] ">
+        <div className="rounded bg-[#353C53] mt-4 flex items-center gap-x-[10px] py-[6px] px-[7px] sm:px-[12px]">
+          <div className="rounded p-[3px] bg-[#FFFFFF1A] sm:p-[6px] ">
             <div className="w-6 h-6 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -453,7 +453,7 @@ const Sidebar = () => {
               </svg>
             </div>
           </div>
-          <div className="flex flex-col gap-y-[2px]">
+          <div className="flex-col gap-y-[2px] hidden sm:flex ">
             <p className="text-[13px] leading-4 font-normal opacity-80">
               Available credits
             </p>

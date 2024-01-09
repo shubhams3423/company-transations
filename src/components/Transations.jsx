@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SingleTransaction from "./SingleTransaction";
 import Pagination from "./Pagination";
 import Navbar from "./Navbar";
@@ -31,7 +31,7 @@ const Transations = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-x-5">
+          <div className="grid gap-5 sm:grid-rows-2 sm:grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 ">
             <div className="bg-white rounded p-5 flex flex-col gap-y-4 shadow-[0_2px_6px_0px_rgba(26,24,30,0.04)]">
               <p className="text-base text-[#4D4D4D]">Online orders</p>
               <p className="text-[32px] leading-[38px] font-medium  text-[#1A181E]">
